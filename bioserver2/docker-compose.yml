@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  bioserver2:
+    build: .
+    container_name: bioserver2
+    restart: unless-stopped
+    environment:
+      - DB_NAME=bioserver2
+      - DB_USER=bioserver
+      - DB_PASSWORD=changeme
+      - GS_IP=0.0.0.0        # interfaces
+    ports:
+      - "8080:8080"           # Apache / PHP (80 DNAS)
+      - "8200:8200"           # LOBBYPORT
+      - "8590:8590"           # GAMEPORT
+    volumes:
+      - bioserver2_db:/var/lib/mysql    # MariaDB data persistence
+      - ./logs:/opt/bioserver2/logs     # Server logs
+
+volumes:
+  bioserver2_db:

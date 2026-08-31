@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  bioserver1:
+    build: .
+    container_name: bioserver1
+    restart: unless-stopped
+    environment:
+      - DB_NAME=bioserver
+      - DB_USER=bioserver
+      - DB_PASSWORD=changeme
+      - GS_IP=0.0.0.0
+    ports:
+      - "8081:8081"           # Apache/PHP
+      - "8300:8300"           # LOBBYPORT
+      - "8690:8690"           # GAMEPORT
+    volumes:
+      - bioserver1_db:/var/lib/mysql
+      - ./logs:/opt/bioserver1/logs
+
+volumes:
+  bioserver1_db:

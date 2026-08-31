@@ -1,0 +1,25 @@
+# مفاتيح خاصة (لا تُرفع أبداً)
+*.key
+
+# أرشيفات المصدر — تُنزَّل عند البناء
+*.tar.gz
+*.zip
+
+# بيانات وسجلات التشغيل
+logs/
+*.log
+*.pcapng
+*.sql.bak
+dump.sql
+backup.sql
+
+# ملفات البيئة
+.env
+*.local
+
+# نظام التشغيل والمحررات
+Thumbs.db
+.DS_Store
+~$*.docx
+.vscode/
+.idea/
