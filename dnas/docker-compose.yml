@@ -1,0 +1,8 @@
+services:
+  my-dnas-server:
+    image: dnas-server
+    container_name: my-dnas-server
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: unless-stopped
