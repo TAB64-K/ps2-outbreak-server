@@ -5,8 +5,9 @@ PlayStation 2 survival-horror title whose official servers were retired years
 ago. The stack was verified with a live cooperative session between two players
 on geographically separate networks.
 
-Graduation project — Network Technologies Diploma, Applied College,
-Imam Mohammad Ibn Saud Islamic University, 2026.
+A personal project, later submitted as a graduation project for the Network
+Technologies Diploma, Applied College, Imam Mohammad Ibn Saud Islamic
+University, 2026.
 
 > This project **deploys and modernizes** existing open-source server software.
 > It does not reverse-engineer the game protocol. See [Credits](#credits).
@@ -97,7 +98,7 @@ with your own value in **all eight** locations:
 > ⚠️ **The value must be identical everywhere.** The upstream project
 > distributes the same placeholder across several files, and missing one is the
 > single most common cause of `Access denied for user 'bioserver'@'localhost'`.
-> This bit us during development; see [Troubleshooting](#troubleshooting).
+> > This bit me during development; see [Troubleshooting](#troubleshooting).
 
 ### 3. Set the advertised session-server address
 
@@ -273,10 +274,13 @@ This project deploys and modernizes existing open-source work.
 - **the obsrv.org community** — protocol reconstruction documented since 2014,
   and the public client-side configuration guidance.
 - **[Corbin](https://www.corbin.zip/outbreak-server/)** — a prior VM-based
-  deployment guide that was our first practical introduction to this subject.
+deployment guide that was my first practical introduction to this subject.
 
 No claim of original protocol reverse-engineering is made in this project.
 
+---
+> **Note:** The READMEs here were written by an AI. I broke the servers, fixed
+> them, and told it what happened — it just made that sound organised.
 ---
 
 ## License
